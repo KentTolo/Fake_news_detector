@@ -1,4 +1,4 @@
-0# 📰 Fake News Detector
+# 📰 Fake News Detector
 
 Fake News Detector is a web application designed to identify fake news articles using machine learning. The project includes a Python-based backend and a responsive frontend for easy interaction.
 
@@ -30,18 +30,18 @@ Fake News Detector is a web application designed to identify fake news articles 
 ---
 
 ## 📂 Project Structure
-
-├── - backend/
-│   ├── - backend_api.py                # Flask API for the Fake News Detector.
-│   ├── - fake_news_model.pkl           # Pretrained machine learning model.
-│   ├──  -fake_news.py                  # Python code for training the model.
-├──  - frontend/
-│   ├── - index.html                    # Main HTML file.
-│   ├── - style.css                     # CSS for styling the UI.
-│   ├── script.js                     # JavaScript for frontend logic.
-├── - data/
-│   ├── - train.csv                     # Dataset used for training the model.             
-└── - requirements.txt                  # Python dependencies.
+    ```bash
+      ├── - backend/
+      │   ├── - backend_api.py                # Flask API for the Fake News Detector.
+      │   ├── - fake_news_model.pkl           # Pretrained machine learning model.
+      │   ├──  -fake_news.py                  # Python code for training the model.
+      ├──  - frontend/
+      │   ├── - index.html                    # Main HTML file.
+      │   ├── - style.css                     # CSS for styling the UI.
+      │   ├── script.js                     # JavaScript for frontend logic.
+      ├── - data/
+      │   ├── - train.csv                     # Dataset used for training the model.             
+      └── - requirements.txt                  # Python dependencies.
 
 
 ---
