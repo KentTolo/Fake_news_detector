@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional fake news detection tool powered by AI to verify news authenticity">
+    <meta name="keywords" content="fake news, news verification, AI detection, misinformation">
+    <meta name="author" content="FakeNewsGuard">
+    <title>FakeNewsGuard | AI-Powered News Verification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>FakeNewsGuard</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#statistics">Statistics</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h1>Combat Misinformation with AI</h1>
+            <p class="subtitle">Verify news authenticity instantly using advanced machine learning algorithms</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-check-circle"></i>
+                    <span>94.68% Accuracy</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Analysis</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure & Private</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="detector-section">
+            <div class="detector-container">
+                <div class="input-container">
+                    <label for="newsInput" class="input-label">News Article Text</label>
+                    <textarea 
+                        id="newsInput" 
+                        placeholder="Paste the complete news article text here for analysis..."
+                        aria-label="News article text"
+                    ></textarea>
+                    <div class="input-meta">
+                        <div class="word-count">Words: <span id="wordCount">0</span></div>
+                        <div class="char-count">Characters: <span id="charCount">0</span></div>
+                    </div>
+                </div>
+                
+                <button id="checkButton" class="check-button">
+                    <span class="button-text">Analyze Article</span>
+                    <div class="spinner hidden"></div>
+                </button>
+
+                <div id="output" class="output hidden">
+                    <div class="result-card">
+                        <h2>Analysis Result</h2>
+                        <div class="prediction-result">
+                            <div class="prediction-text"></div>
+                            <div class="confidence-meter">
+                                <div class="meter-label">Confidence Score</div>
+                                <div class="meter-bar">
+                                    <div class="meter-fill"></div>
+                                </div>
+                                <div class="confidence-score"></div>
+                            </div>
+                        </div>
+                        <div class="analysis-details">
+                            <div class="timestamp"></div>
+                            <button class="share-button">
+                                <i class="fas fa-share-alt"></i>
+                                Share Result
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="error" class="error hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About FakeNewsGuard</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>FakeNewsGuard is an AI-powered tool designed to help users identify potential misinformation in news articles. Our system uses advanced machine learning algorithms trained on thousands of verified news sources to provide accurate analysis.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI-Powered Analysis</h3>
+                            <p>Advanced machine learning algorithms trained on verified news sources</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-lock"></i>
+                            <h3>Privacy First</h3>
+                            <p>Your data is never stored or shared with third parties</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Real-time Updates</h3>
+                            <p>Our models are continuously updated with the latest data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works-section">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-paste"></i>
+                    <h3>Paste Article</h3>
+                    <p>Copy and paste the complete news article text you want to verify</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Analysis</h3>
+                    <p>Our AI model analyzes the content using multiple verification parameters</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Get Results</h3>
+                    <p>Receive detailed analysis with confidence score and authenticity rating</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="statistics" class="statistics-section">
+            <h2>Impact Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="+20000">0</div>
+                    <div class="stat-label">Articles Analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="94.68">0</div>
+                    <div class="stat-label">% Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Simulated Users Worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">% User Satisfaction</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faqs" class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How accurate is the detection?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI model has achieved 94.68% accuracy in controlled tests, though real-world performance may vary depending on the complexity and context of the news article.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my data secure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we take privacy seriously. All analysis is performed in real-time and we don't store any article content or personal information.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the AI detect fake news?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI analyzes multiple factors including writing style, source credibility patterns, and content consistency using advanced natural language processing techniques.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What types of content can I analyze?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can analyze any news article text in English. The system works best with complete articles rather than headlines or short excerpts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FakeNewsGuard</h3>
+                <p>Empowering users to identify truth in the digital age</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: support@fakenewsguard.com</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/keketso-tolo-75644a291/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/KentTolo" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FakeNewsGuard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
