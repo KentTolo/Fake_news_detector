@@ -92,22 +92,23 @@ Fake News Detector is a web application designed to identify fake news articles 
 
 The project uses a labeled dataset of real and fake news articles:
 
--Columns:
- - **id**: Article ID "\n"
+- Columns:
+ - **id**: Article ID 
  - **title**: Article title
  - **author**: Author name
  - **text**: Article content
  - **label**: 1 for real news, 0 for fake news.
+   
 Dataset is included in the data/ directory.
 
 ---
 ## 🎯 Future Improvements
 
--Enhance model accuracy with advanced algorithms (e.g., transformers).
--Add multi-language support for global applicability.
--Integrate real-time scraping of news articles for analysis.
+- Enhance model accuracy with advanced algorithms (e.g., transformers).
+- Add multi-language support for global applicability.
+- Integrate real-time scraping of news articles for analysis.
 
 ---
 ### 🙌 Acknowledgments
--Dataset: https://www.kaggle.com/competitions/fake-news/data?select=train.csv
--Inspired by the need to tackle misinformation effectively.
+- Dataset: https://www.kaggle.com/competitions/fake-news/data?select=train.csv
+- Inspired by the need to tackle misinformation effectively.
